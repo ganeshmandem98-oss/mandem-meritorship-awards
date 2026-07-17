@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,20 +18,33 @@
 
 <header>
 
+
 <img src="images/logo.png" class="logo">
+
+
+<div class="title">
 
 <h1>
 THE MANDEM MERITORSHIP AWARDS
 </h1>
 
+
 <p>
 "Celebrating Excellence • Inspiring Futures"
 </p>
+
 
 <p>
 Honoring the SSC Toppers of ZPHS Nooliveedu,
 Galiveedu, Andhra Pradesh
 </p>
+
+
+</div>
+
+
+</header>
+
 
 
 <nav>
@@ -49,14 +63,14 @@ Galiveedu, Andhra Pradesh
 </nav>
 
 
-</header>
-
 
 
 <section class="home">
 
 
-<h2>Welcome</h2>
+<h2>
+Welcome
+</h2>
 
 
 <p>
@@ -67,6 +81,7 @@ honor, and encourage the outstanding academic achievements
 of the students of <b>ZPHS Nooliveedu</b>.
 
 </p>
+
 
 
 <p>
@@ -81,7 +96,83 @@ to dream bigger, work harder, and achieve greater success.
 
 
 
+
+<section class="poster">
+
+
+<h1>
+THE MANDEM
+<br>
+MERITORSHIP AWARDS
+</h1>
+
+
+<h2>
+Celebrating Academic Excellence
+</h2>
+
+
+<p>
+Recognizing Young Achievers
+</p>
+
+
+<p>
+Excellence • Merit • Achievement
+</p>
+
+
+</section>
+
+
+
+
+
+<section class="info-box">
+
+
+<h2>
+LIVE WEBSITE INFORMATION
+</h2>
+
+
+<p>
+👥 Visitors
+</p>
+
+<h3>
+12,564
+</h3>
+
+
+
+<p>
+📅 Today's Date
+</p>
+
+<h3 id="date">
+</h3>
+
+
+
+
+<p>
+⏰ Current Time
+</p>
+
+<h3 id="time">
+</h3>
+
+
+</section>
+
+
+
+
+
+
 <footer>
+
 
 <h3>
 THE MANDEM MERITORSHIP AWARDS
@@ -108,6 +199,38 @@ All Rights Reserved
 
 
 </footer>
+
+
+
+
+
+<script>
+
+
+function updateTime(){
+
+
+let now = new Date();
+
+
+document.getElementById("date").innerHTML =
+now.toDateString();
+
+
+document.getElementById("time").innerHTML =
+now.toLocaleTimeString();
+
+
+}
+
+
+setInterval(updateTime,1000);
+
+updateTime();
+
+
+</script>
+
 
 
 </body>
