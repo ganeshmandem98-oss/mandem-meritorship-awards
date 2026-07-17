@@ -1,59 +1,99 @@
-.header {
-    background: white;
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
 }
 
 
-/* Logo + Title */
-.top-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+.top-header{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:25px;
+
 }
 
 
-.logo img {
-    width: 120px;
-    height: auto;
-    margin-right: 25px;
+.logo img{
+
+    width:120px;
+    margin-right:25px;
+
 }
 
 
-.title-area h1 {
-    margin: 0;
-    font-size: 32px;
-    color: #7b0000;
-    font-weight: bold;
+.title-area h1{
+
+    margin:0;
+    font-size:32px;
+    color:#800000;
+
 }
 
 
-.title-area p {
-    margin-top: 8px;
-    font-size: 20px;
-    color: #444;
-    font-style: italic;
+.title-area p{
+
+    margin-top:10px;
+    font-size:20px;
+    color:#444;
+
 }
 
 
-/* Navigation */
 
-.navbar {
-    background: #7b0000;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+nav{
+
+    background:#800000;
+    text-align:center;
+    padding:15px;
+
 }
 
 
-.navbar a {
-    color: white;
-    padding: 15px 18px;
-    text-decoration: none;
-    font-size: 16px;
+nav a{
+
+    color:white;
+    text-decoration:none;
+    margin:10px;
+    font-size:16px;
+
 }
 
 
-.navbar a:hover {
-    background: #d4af37;
-    color: black;
+nav a:hover{
+
+    color:#ffd700;
+
+}
+
+
+
+.memory{
+
+    text-align:center;
+    padding:50px;
+}
+
+
+.memory h2{
+
+    color:#800000;
+
+}
+
+
+.memory h3{
+
+    font-size:24px;
+
+}
+
+
+.memory p{
+
+    max-width:800px;
+    margin:15px auto;
+    line-height:1.8;
+    font-size:17px;
+
 }
