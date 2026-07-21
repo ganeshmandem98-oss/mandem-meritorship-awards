@@ -1,99 +1,118 @@
-body{
-    margin:0;
+/* General Styles */
+body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
 }
 
-
-.top-header{
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:25px;
-
+/* Header & Navigation */
+header {
+    background-color: #0b2545;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
 }
 
-
-.logo img{
-
-    width:120px;
-    margin-right:25px;
-
+header .logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
-
-.title-area h1{
-
-    margin:0;
-    font-size:32px;
-    color:#800000;
-
+header h1 {
+    margin: 5px 0;
+    font-size: 24px;
+    letter-spacing: 1px;
 }
 
-
-.title-area p{
-
-    margin-top:10px;
-    font-size:20px;
-    color:#444;
-
+header p {
+    margin: 5px 0 15px 0;
+    font-style: italic;
+    color: #8da9c4;
 }
 
-
-
-nav{
-
-    background:#800000;
-    text-align:center;
-    padding:15px;
-
+nav {
+    background-color: #134074;
+    padding: 10px;
+    text-align: center;
 }
 
-
-nav a{
-
-    color:white;
-    text-decoration:none;
-    margin:10px;
-    font-size:16px;
-
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s;
 }
 
-
-nav a:hover{
-
-    color:#ffd700;
-
+nav a:hover {
+    color: #ee6c4d;
 }
 
-
-
-.memory{
-
-    text-align:center;
-    padding:50px;
+/* Sections & Cards */
+section {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-
-.memory h2{
-
-    color:#800000;
-
+h2 {
+    color: #0b2545;
+    border-bottom: 2px solid #8da9c4;
+    padding-bottom: 8px;
 }
 
-
-.memory h3{
-
-    font-size:24px;
-
+.card {
+    background: #f0f4f8;
+    padding: 15px;
+    margin: 15px 0;
+    border-left: 5px solid #134074;
+    border-radius: 4px;
 }
 
+blockquote {
+    font-style: italic;
+    background: #eef4f8;
+    padding: 15px;
+    border-left: 5px solid #ee6c4d;
+    margin: 20px 0;
+}
 
-.memory p{
+/* Gallery Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
 
-    max-width:800px;
-    margin:15px auto;
-    line-height:1.8;
-    font-size:17px;
+.gallery .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
 
+/* Footer */
+footer {
+    background-color: #0b2545;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 5px 0;
+    color: #8da9c4;
+}
+
+footer b {
+    color: white;
 }
