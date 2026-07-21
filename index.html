@@ -16,24 +16,24 @@ body {
     padding: 0;
 }
 
-/* Header Styling */
+/* Header Styling - Restored compact, clean spacing for all pages */
 header {
     background: linear-gradient(135deg, #0b2545 0%, #134074 100%);
     color: white;
-    padding: 25px 20px;
+    padding: 20px 15px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 header h1 {
-    margin: 10px 0 5px 0;
-    font-size: 28px;
+    margin: 5px 0;
+    font-size: 24px;
     letter-spacing: 1px;
 }
 
 header p {
-    margin: 0 0 15px 0;
-    font-size: 15px;
+    margin: 0 0 10px 0;
+    font-size: 14px;
     color: #8da9c4;
     font-style: italic;
 }
@@ -42,16 +42,16 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 15px;
+    gap: 12px;
+    margin-top: 10px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
-    padding: 6px 12px;
+    padding: 5px 10px;
     border-radius: 4px;
     transition: background 0.3s;
 }
@@ -63,8 +63,8 @@ nav a:hover {
 /* Main Section Layout */
 section {
     max-width: 900px;
-    margin: 30px auto;
-    padding: 30px;
+    margin: 20px auto;
+    padding: 25px;
     background: white;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.06);
@@ -73,15 +73,15 @@ section {
 section h2 {
     text-align: center;
     color: #0b2545;
-    margin-bottom: 25px;
-    font-size: 24px;
+    margin-bottom: 20px;
+    font-size: 22px;
 }
 
-/* Enhanced High-Aesthetic Hero Slider */
+/* Enhanced High-Aesthetic Hero Slider (5-6 rich contextual slides) */
 .slider-container {
     width: 100%;
-    height: 420px;
-    margin: 0 auto 30px auto;
+    height: 400px;
+    margin: 0 auto 25px auto;
     position: relative;
     overflow: hidden;
     border-radius: 16px;
@@ -115,7 +115,7 @@ section h2 {
     color: white;
     padding: 25px 20px 15px 20px;
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     letter-spacing: 0.5px;
     text-shadow: 0 2px 4px rgba(0,0,0,0.4);
@@ -126,8 +126,8 @@ section h2 {
 .poetic-box {
     background: linear-gradient(135deg, #134074 0%, #0b2545 100%);
     border-left: 6px solid #ee6c4d;
-    padding: 35px 30px;
-    margin: 30px 0;
+    padding: 30px 25px;
+    margin: 25px 0;
     border-radius: 0 14px 14px 0;
     text-align: center;
     box-shadow: 0 8px 25px rgba(19,64,116,0.25);
@@ -135,7 +135,7 @@ section h2 {
 }
 
 .poetic-text {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
     line-height: 1.8;
     font-style: italic;
@@ -145,7 +145,7 @@ section h2 {
 
 .poetic-translation {
     margin-top: 15px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
     color: #e2e8f0;
     border-top: 1px solid rgba(255,255,255,0.2);
@@ -156,34 +156,67 @@ section h2 {
 /* Descriptive Paragraph */
 .intro-para {
     text-align: justify;
-    font-size: 15px;
+    font-size: 14px;
     color: #444;
     font-weight: 400;
-    line-height: 1.9;
+    line-height: 1.8;
     background: #f8fafc;
-    padding: 20px;
+    padding: 18px;
     border-radius: 8px;
     border: 1px solid #e2e8f0;
+}
+
+/* Video / BGM Section Styling */
+.media-section {
+    margin: 30px 0;
+    text-align: center;
+    background: #f1f5f9;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+}
+
+.media-section h3 {
+    margin-top: 0;
+    color: #0b2545;
+    font-size: 18px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    height: 380px;
+    margin: 15px auto 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 /* Footer Design */
 footer {
     background: #0b2545;
     color: white;
-    padding: 40px 20px 25px 20px;
-    margin-top: 50px;
+    padding: 30px 20px 20px 20px;
+    margin-top: 40px;
 }
 
 footer h3 {
     margin: 0 0 5px 0;
-    font-size: 18px;
+    font-size: 17px;
     letter-spacing: 0.5px;
 }
 
 footer p {
-    margin: 5px 0;
+    margin: 4px 0;
     color: #8da9c4;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .single-line-footer {
@@ -192,11 +225,11 @@ footer p {
     align-items: center;
     flex-wrap: wrap;
     gap: 15px;
-    font-size: 13px;
+    font-size: 12px;
     color: #8da9c4;
-    margin-top: 20px;
+    margin-top: 15px;
     border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 15px;
+    padding-top: 12px;
 }
 
 .single-line-footer a {
@@ -374,7 +407,7 @@ footer p {
 <body>
 
 <header>
-<img src="images/logo.png" class="logo" style="display: block; margin: 0 auto 5px auto;" alt="Logo">
+<img src="images/logo.png" class="logo" style="display: block; margin: 0 auto 5px auto;" alt="Logo" width="45">
 <h1>THE MANDEM MERITORSHIP AWARDS</h1>
 <p>"Celebrating Excellence • Inspiring Futures"</p>
 <nav>
@@ -393,27 +426,35 @@ footer p {
 <section>
 <h2>WELCOME TO THE MANDEM MERITORSHIP AWARDS</h2>
 
-<!-- High-Aesthetic Hero Slideshow featuring ZPHS Nooliveedu / Annamayya District environment -->
+<!-- 6-Slide High-Aesthetic Hero Slideshow (ZPHS Nooliveedu, rural kids, awards presentation, map pin location) -->
 <div class="slider-container">
     <div class="slide active">
-        <img src="https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?auto=format&fit=crop&w=1200&q=80" style="width:100%; height:100%; object-fit:cover;" alt="Rural School Campus in AP">
-        <div class="slide-caption">ZPHS Nooliveedu — Where Our Journey Began</div>
+        <img src="https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?auto=format&fit=crop&w=1200&q=80" alt="ZPHS Nooliveedu School Campus">
+        <div class="slide-caption">ZPHS Nooliveedu School Campus — Annamayya District, AP</div>
     </div>
     <div class="slide">
-        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80" style="width:100%; height:100%; object-fit:cover;" alt="Students Excellence">
-        <div class="slide-caption">Empowering Young Minds & Academic Achievers</div>
+        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80" alt="Rural School Children">
+        <div class="slide-caption">Bright Minds & Inspiring Students from Rural Backdrop</div>
     </div>
     <div class="slide">
-        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80" style="width:100%; height:100%; object-fit:cover;" alt="Annamayya Hills Scenery">
-        <div class="slide-caption">Rooted in the Soil of Annamayya District</div>
+        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80" alt="Memento & Scholarship Presentation">
+        <div class="slide-caption">Honoring Top SSC Achievers with Mementos & Cash Prizes</div>
     </div>
     <div class="slide">
-        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80" style="width:100%; height:100%; object-fit:cover;" alt="Graduation Celebration">
-        <div class="slide-caption">Inspiring Every Coming Generation From 2026</div>
+        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80" alt="Award Ceremony Distribution">
+        <div class="slide-caption">Encouraging Academic Excellence & Future Leaders</div>
+    </div>
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=80" alt="Map Location Coordinates Pin">
+        <div class="slide-caption">📍 ZPHS Nooliveedu Coordinates Pin — Rooted in Annamayya District</div>
+    </div>
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80" alt="Library & Learning">
+        <div class="slide-caption">Building a Legacy of Gratitude from 2026 Onwards</div>
     </div>
 </div>
 
-<!-- Stunning Poetic Sanskrit Quote Box with High Aesthetic Styling -->
+<!-- Stunning Poetic Sanskrit Quote Box -->
 <div class="poetic-box">
     <div class="poetic-text">
         "Janmabhumiḥ sadā mātā, śālā janani-rūpiṇī ।<br>
@@ -426,8 +467,18 @@ footer p {
 </div>
 
 <p class="intro-para">
-    We carry the sweet memories and roots of ZPHS Nooliveedu in Annamayya district, where we spent our childhood and grew up. The roof that shielded us and the soil that nurtured us will always be close to our hearts. This humble initiative is our small way of showing gratitude—built with love to inspire every coming generation from 2026 onwards.
+    We carry the sweet memories and roots of ZPHS Nooliveedu in Annamayya District, AP, where we spent our childhood and grew up. The roof that shielded us and the soil that nurtured us will always be close to our hearts. This humble initiative is our small way of showing gratitude—built with love to inspire every coming generation from 2026 onwards.
 </p>
+
+<!-- Telugu BGM / Video Tribute Section -->
+<div class="media-section">
+    <h3>🎵 Tributes to Our Roots & Alma Mater</h3>
+    <p style="font-size: 13px; color: #64748b; margin-bottom: 10px;">Experience the nostalgic emotion of our school days and homeland.</p>
+    <div class="video-container">
+        <!-- Embedded emotional background musical video tribute -->
+        <iframe src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=0&mute=1&loop=1" title="Telugu School BGM Tribute" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
 </section>
 
 <footer>
@@ -437,7 +488,7 @@ footer p {
     <p>Developed & Maintained by</p>
     <p><b>GANESH MANDEM</b></p>
     
-    <!-- Single Line Bottom Info with Live Clock & Working Visitor Stats -->
+    <!-- Single Line Bottom Info with Live Clock & Visitor Stats -->
     <div class="single-line-footer">
         <span>© 2026 All Rights Reserved</span>
         <span>|</span>
@@ -484,7 +535,7 @@ footer p {
 
 <script src="script.js"></script>
 <script>
-// Image Slider Logic
+// Image Slider Logic (6 Slides)
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 
@@ -543,10 +594,10 @@ function sendMessage() {
 
     // Automated smart bot response simulation
     setTimeout(() => {
-        let reply = "Thank you for reaching out! The Mandem Meritorship Awards 2026 honors top SSC performers of ZPHS Nooliveedu. For specific ceremony updates, please check back soon or contact Ganesh Mandem.";
+        let reply = "Thank you for reaching out! The Mandem Meritorship Awards 2026 honors top SSC performers of ZPHS Nooliveedu in Annamayya District. For specific ceremony updates, please check back soon or contact Ganesh Mandem.";
         const lowerMsg = message.toLowerCase();
         if(lowerMsg.includes("date") || lowerMsg.includes("when")) {
-            reply = "The Mandem Meritorship Awards ceremony takes place annually to honor the top SSC achievers of ZPHS Nooliveedu.";
+            reply = "The Mandem Meritorship Awards ceremony takes place annually to honor top SSC achievers of ZPHS Nooliveedu.";
         } else if(lowerMsg.includes("venue") || lowerMsg.includes("where")) {
             reply = "The awards are hosted proudly at ZPHS Nooliveedu school campus in Annamayya District, AP.";
         } else if(lowerMsg.includes("founder") || lowerMsg.includes("ganesh")) {
