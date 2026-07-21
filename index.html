@@ -16,24 +16,24 @@ body {
     padding: 0;
 }
 
-/* Header Styling - Restored compact, clean spacing for all pages */
+/* Header Styling - Exactly matching original clean styling */
 header {
-    background: linear-gradient(135deg, #0b2545 0%, #134074 100%);
+    background: #0b2545;
     color: white;
-    padding: 20px 15px;
+    padding: 25px 20px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 header h1 {
-    margin: 5px 0;
-    font-size: 24px;
+    margin: 10px 0 5px 0;
+    font-size: 28px;
     letter-spacing: 1px;
 }
 
 header p {
-    margin: 0 0 10px 0;
-    font-size: 14px;
+    margin: 0 0 15px 0;
+    font-size: 15px;
     color: #8da9c4;
     font-style: italic;
 }
@@ -42,16 +42,16 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 10px;
+    gap: 15px;
+    margin-top: 15px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
-    padding: 5px 10px;
+    padding: 6px 12px;
     border-radius: 4px;
     transition: background 0.3s;
 }
@@ -63,8 +63,8 @@ nav a:hover {
 /* Main Section Layout */
 section {
     max-width: 900px;
-    margin: 20px auto;
-    padding: 25px;
+    margin: 30px auto;
+    padding: 30px;
     background: white;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.06);
@@ -73,15 +73,15 @@ section {
 section h2 {
     text-align: center;
     color: #0b2545;
-    margin-bottom: 20px;
-    font-size: 22px;
+    margin-bottom: 25px;
+    font-size: 24px;
 }
 
-/* Enhanced High-Aesthetic Hero Slider (5-6 rich contextual slides) */
+/* 6-Slide High-Aesthetic Hero Slider with Embedded Background Audio */
 .slider-container {
     width: 100%;
-    height: 400px;
-    margin: 0 auto 25px auto;
+    height: 420px;
+    margin: 0 auto 30px auto;
     position: relative;
     overflow: hidden;
     border-radius: 16px;
@@ -115,19 +115,42 @@ section h2 {
     color: white;
     padding: 25px 20px 15px 20px;
     text-align: center;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.5px;
     text-shadow: 0 2px 4px rgba(0,0,0,0.4);
     z-index: 2;
 }
 
+/* Music Control Overlay inside Slideshow */
+.audio-control-bar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    background: rgba(11, 37, 69, 0.85);
+    padding: 8px 14px;
+    border-radius: 20px;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.audio-control-bar:hover {
+    background: rgba(19, 64, 116, 0.95);
+}
+
 /* Stunning Glassmorphic / Gradient Sanskrit Quote Box */
 .poetic-box {
     background: linear-gradient(135deg, #134074 0%, #0b2545 100%);
     border-left: 6px solid #ee6c4d;
-    padding: 30px 25px;
-    margin: 25px 0;
+    padding: 35px 30px;
+    margin: 30px 0;
     border-radius: 0 14px 14px 0;
     text-align: center;
     box-shadow: 0 8px 25px rgba(19,64,116,0.25);
@@ -135,7 +158,7 @@ section h2 {
 }
 
 .poetic-text {
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 600;
     line-height: 1.8;
     font-style: italic;
@@ -145,7 +168,7 @@ section h2 {
 
 .poetic-translation {
     margin-top: 15px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
     color: #e2e8f0;
     border-top: 1px solid rgba(255,255,255,0.2);
@@ -156,67 +179,34 @@ section h2 {
 /* Descriptive Paragraph */
 .intro-para {
     text-align: justify;
-    font-size: 14px;
+    font-size: 15px;
     color: #444;
     font-weight: 400;
-    line-height: 1.8;
+    line-height: 1.9;
     background: #f8fafc;
-    padding: 18px;
+    padding: 20px;
     border-radius: 8px;
     border: 1px solid #e2e8f0;
-}
-
-/* Video / BGM Section Styling */
-.media-section {
-    margin: 30px 0;
-    text-align: center;
-    background: #f1f5f9;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #cbd5e1;
-}
-
-.media-section h3 {
-    margin-top: 0;
-    color: #0b2545;
-    font-size: 18px;
-}
-
-.video-container {
-    position: relative;
-    width: 100%;
-    max-width: 700px;
-    height: 380px;
-    margin: 15px auto 0 auto;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-}
-
-.video-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
 }
 
 /* Footer Design */
 footer {
     background: #0b2545;
     color: white;
-    padding: 30px 20px 20px 20px;
-    margin-top: 40px;
+    padding: 40px 20px 25px 20px;
+    margin-top: 50px;
 }
 
 footer h3 {
     margin: 0 0 5px 0;
-    font-size: 17px;
+    font-size: 18px;
     letter-spacing: 0.5px;
 }
 
 footer p {
-    margin: 4px 0;
+    margin: 5px 0;
     color: #8da9c4;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .single-line-footer {
@@ -225,11 +215,11 @@ footer p {
     align-items: center;
     flex-wrap: wrap;
     gap: 15px;
-    font-size: 12px;
+    font-size: 13px;
     color: #8da9c4;
-    margin-top: 15px;
+    margin-top: 20px;
     border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 12px;
+    padding-top: 15px;
 }
 
 .single-line-footer a {
@@ -426,8 +416,19 @@ footer p {
 <section>
 <h2>WELCOME TO THE MANDEM MERITORSHIP AWARDS</h2>
 
-<!-- 6-Slide High-Aesthetic Hero Slideshow (ZPHS Nooliveedu, rural kids, awards presentation, map pin location) -->
+<!-- 6-Slide High-Aesthetic Hero Slideshow with "Maa Telugu Talliki" Background Audio -->
 <div class="slider-container">
+    <!-- Background Audio (Maa Telugu Talliki Instrumental / Song) -->
+    <audio id="bgm-audio" loop>
+        <source src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Maa_Telugu_Talliki.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Clickable Audio Control Badge -->
+    <div class="audio-control-bar" onclick="toggleAudio()" id="audio-btn">
+        🎵 Play Telugu Anthem BGM
+    </div>
+
     <div class="slide active">
         <img src="https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?auto=format&fit=crop&w=1200&q=80" alt="ZPHS Nooliveedu School Campus">
         <div class="slide-caption">ZPHS Nooliveedu School Campus — Annamayya District, AP</div>
@@ -469,16 +470,6 @@ footer p {
 <p class="intro-para">
     We carry the sweet memories and roots of ZPHS Nooliveedu in Annamayya District, AP, where we spent our childhood and grew up. The roof that shielded us and the soil that nurtured us will always be close to our hearts. This humble initiative is our small way of showing gratitude—built with love to inspire every coming generation from 2026 onwards.
 </p>
-
-<!-- Telugu BGM / Video Tribute Section -->
-<div class="media-section">
-    <h3>🎵 Tributes to Our Roots & Alma Mater</h3>
-    <p style="font-size: 13px; color: #64748b; margin-bottom: 10px;">Experience the nostalgic emotion of our school days and homeland.</p>
-    <div class="video-container">
-        <!-- Embedded emotional background musical video tribute -->
-        <iframe src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=0&mute=1&loop=1" title="Telugu School BGM Tribute" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-</div>
 </section>
 
 <footer>
@@ -546,6 +537,25 @@ function nextSlide() {
     slides[currentSlide].classList.add('active');
 }
 setInterval(nextSlide, 4000);
+
+// Background Music Toggle Logic
+let isPlaying = false;
+function toggleAudio() {
+    const audio = document.getElementById('bgm-audio');
+    const btn = document.getElementById('audio-btn');
+    if(isPlaying) {
+        audio.pause();
+        btn.innerHTML = "🎵 Play Telugu Anthem BGM";
+        isPlaying = false;
+    } else {
+        audio.play().then(() => {
+            btn.innerHTML = "⏸️ Pause BGM";
+            isPlaying = true;
+        }).catch(err => {
+            alert("Audio playback requires browser interaction.");
+        });
+    }
+}
 
 // Fix Live Clock Display
 function updateClock() {
