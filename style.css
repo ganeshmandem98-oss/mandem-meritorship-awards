@@ -1,9 +1,9 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #f4f7f6;
     color: #333;
     line-height: 1.6;
 }
@@ -13,19 +13,24 @@ header {
     background-color: #0b2545;
     color: white;
     text-align: center;
-    padding: 20px 10px;
+    padding: 25px 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 header .logo {
-    width: 80px;
-    height: auto;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #8da9c4;
     margin-bottom: 10px;
+    background: white;
 }
 
 header h1 {
     margin: 5px 0;
-    font-size: 24px;
-    letter-spacing: 1px;
+    font-size: 26px;
+    letter-spacing: 1.5px;
 }
 
 header p {
@@ -36,66 +41,190 @@ header p {
 
 nav {
     background-color: #134074;
-    padding: 10px;
+    padding: 12px;
     text-align: center;
+    box-shadow: inset 0 -2px 5px rgba(0,0,0,0.2);
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
+    margin: 0 12px;
+    font-weight: 600;
     font-size: 14px;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
     color: #ee6c4d;
 }
 
-/* Sections & Cards */
+/* Sections */
 section {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 h2 {
     color: #0b2545;
-    border-bottom: 2px solid #8da9c4;
-    padding-bottom: 8px;
+    border-bottom: 3px solid #8da9c4;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
 }
 
-.card {
+/* Recipients Aesthetic Grid Styling */
+.recipient-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.recipient-card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(11, 37, 69, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e1e8ed;
+    text-align: center;
+    position: relative;
+}
+
+.recipient-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(11, 37, 69, 0.15);
+}
+
+.recipient-card .img-container {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    background-color: #f0f4f8;
+}
+
+.recipient-card .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.recipient-card:hover .img-container img {
+    transform: scale(1.05);
+}
+
+.recipient-info {
+    padding: 20px;
+}
+
+.rank-badge {
+    display: inline-block;
+    background: #ee6c4d;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.recipient-info h3 {
+    margin: 5px 0 10px 0;
+    color: #0b2545;
+    font-size: 20px;
+}
+
+.award-title {
+    color: #134074;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.marks-badge {
     background: #f0f4f8;
-    padding: 15px;
-    margin: 15px 0;
-    border-left: 5px solid #134074;
-    border-radius: 4px;
+    color: #0b2545;
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 12px;
+    display: inline-block;
+}
+
+/* Founder & Memory Aesthetic Layouts */
+.profile-card, .memory-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    background: #fafbfc;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e1e8ed;
+}
+
+.profile-img-container, .memory-img-container {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    height: 320px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 0 auto;
+}
+
+.profile-img-container img, .memory-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-details, .memory-content {
+    flex: 2;
+    min-width: 280px;
+}
+
+.profile-details h3, .memory-content h3 {
+    color: #134074;
+    margin-bottom: 5px;
+}
+
+.profile-details h2 {
+    border: none;
+    text-align: left;
+    margin: 0 0 10px 0;
+    color: #0b2545;
+}
+
+.sub-text {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
 }
 
 blockquote {
     font-style: italic;
-    background: #eef4f8;
+    background: #f0f4f8;
     padding: 15px;
-    border-left: 5px solid #ee6c4d;
-    margin: 20px 0;
+    border-left: 4px solid #ee6c4d;
+    margin: 15px 0 0 0;
+    color: #333;
+    border-radius: 0 8px 8px 0;
 }
 
-/* Gallery Grid */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-}
-
-.gallery .card img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
+.tribute-text {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 15px;
+    text-align: justify;
 }
 
 /* Footer */
@@ -103,13 +232,13 @@ footer {
     background-color: #0b2545;
     color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    padding: 25px;
+    margin-top: 50px;
     font-size: 14px;
 }
 
 footer p {
-    margin: 5px 0;
+    margin: 6px 0;
     color: #8da9c4;
 }
 
