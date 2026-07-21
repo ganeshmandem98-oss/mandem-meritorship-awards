@@ -7,15 +7,85 @@
 <title>The Mandem Meritorship Awards - 2026</title>
 <link rel="stylesheet" href="style.css">
 <style>
-/* Slider Styles for Moving Pictures */
+/* Global Reset & Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #0b2545 0%, #134074 100%);
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+header h1 {
+    margin: 10px 0 5px 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 0 0 15px 0;
+    font-size: 15px;
+    color: #8da9c4;
+    font-style: italic;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+/* Main Section Layout */
+section {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+section h2 {
+    text-align: center;
+    color: #0b2545;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+/* Enhanced High-Aesthetic Hero Slider */
 .slider-container {
-    max-width: 600px;
-    height: 350px;
-    margin: 20px auto;
+    width: 100%;
+    height: 420px;
+    margin: 0 auto 30px auto;
     position: relative;
     overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(11,37,69,0.2);
     background: #000;
 }
 
@@ -24,33 +94,98 @@
     height: 100%;
     object-fit: cover;
     position: absolute;
+    top: 0;
+    left: 0;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1.2s ease-in-out, transform 6s ease-out;
+    transform: scale(1);
 }
 
 .slide.active {
     opacity: 1;
+    transform: scale(1.05);
 }
 
-/* Poetic Quote Box */
-.poetic-box {
-    background: #f0f4f8;
-    border-left: 5px solid #ee6c4d;
-    padding: 25px;
-    margin: 20px 0;
-    border-radius: 0 10px 10px 0;
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(11,37,69,0.85), transparent);
+    color: white;
+    padding: 25px 20px 15px 20px;
     text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    z-index: 2;
+}
+
+/* Stunning Glassmorphic / Gradient Sanskrit Quote Box */
+.poetic-box {
+    background: linear-gradient(135deg, #134074 0%, #0b2545 100%);
+    border-left: 6px solid #ee6c4d;
+    padding: 35px 30px;
+    margin: 30px 0;
+    border-radius: 0 14px 14px 0;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(19,64,116,0.25);
+    color: #ffffff;
 }
 
 .poetic-text {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
-    color: #0b2545;
     line-height: 1.8;
     font-style: italic;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-/* Single Line Footer */
+.poetic-translation {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #e2e8f0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 15px;
+    font-style: normal;
+}
+
+/* Descriptive Paragraph */
+.intro-para {
+    text-align: justify;
+    font-size: 15px;
+    color: #444;
+    font-weight: 400;
+    line-height: 1.9;
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Footer Design */
+footer {
+    background: #0b2545;
+    color: white;
+    padding: 40px 20px 25px 20px;
+    margin-top: 50px;
+}
+
+footer h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+footer p {
+    margin: 5px 0;
+    color: #8da9c4;
+    font-size: 14px;
+}
+
 .single-line-footer {
     display: flex;
     justify-content: center;
@@ -59,7 +194,7 @@
     gap: 15px;
     font-size: 13px;
     color: #8da9c4;
-    margin-top: 15px;
+    margin-top: 20px;
     border-top: 1px solid rgba(255,255,255,0.1);
     padding-top: 15px;
 }
@@ -74,19 +209,122 @@
     text-decoration: underline;
 }
 
-/* Lead Form inside Chatbot */
+/* GANACE AI Chatbot Widget Styles */
+.chatbot-container {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.chat-toggle-btn {
+    background: #ee6c4d;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(238,108,77,0.4);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.chat-toggle-btn:hover {
+    background: #d95332;
+    transform: scale(1.05);
+}
+
+.chat-box {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    width: 330px;
+    height: 440px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+.chat-box.active {
+    display: flex;
+}
+
+.chat-header {
+    background: #0b2545;
+    color: white;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-title-group h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.chat-title-group span {
+    font-size: 11px;
+    color: #8da9c4;
+}
+
+.close-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.chat-body {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-message {
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    max-width: 85%;
+    line-height: 1.4;
+}
+
+.bot-msg {
+    background: #e2e8f0;
+    color: #0b2545;
+    align-self: flex-start;
+}
+
+.user-msg {
+    background: #134074;
+    color: white;
+    align-self: flex-end;
+}
+
 .chat-lead-form {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    padding: 10px;
+    margin-top: 8px;
 }
 
 .chat-lead-form input {
-    padding: 8px;
-    border: 1px solid #ccc;
+    padding: 8px 10px;
+    border: 1px solid #cbd5e1;
     border-radius: 6px;
     font-size: 13px;
+    outline: none;
 }
 
 .chat-lead-form button {
@@ -97,6 +335,38 @@
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
+    transition: background 0.2s;
+}
+
+.chat-lead-form button:hover {
+    background: #0b2545;
+}
+
+.chat-footer {
+    display: flex;
+    padding: 10px;
+    background: white;
+    border-top: 1px solid #e2e8f0;
+    gap: 8px;
+}
+
+.chat-footer input {
+    flex: 1;
+    padding: 8px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 13px;
+    outline: none;
+}
+
+.chat-footer button {
+    background: #134074;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
 }
 </style>
 </head>
@@ -104,7 +374,7 @@
 <body>
 
 <header>
-<img src="images/logo.png" class="logo" style="display: block; margin: 0 auto 5px auto;">
+<img src="images/logo.png" class="logo" style="display: block; margin: 0 auto 5px auto;" alt="Logo">
 <h1>THE MANDEM MERITORSHIP AWARDS</h1>
 <p>"Celebrating Excellence • Inspiring Futures"</p>
 <nav>
@@ -123,28 +393,40 @@
 <section>
 <h2>WELCOME TO THE MANDEM MERITORSHIP AWARDS</h2>
 
-<!-- Moving Pictures Slideshow with Google AI-themed placeholders -->
+<!-- High-Aesthetic Hero Slideshow featuring ZPHS Nooliveedu / Annamayya District environment -->
 <div class="slider-container">
-    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80" class="slide active" alt="School Campus">
-    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Students Learning" class="slide">
-    <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=800&q=80" alt="Classroom" class="slide">
-    <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=80" alt="Library" class="slide">
-</div>
-
-<!-- Poetic Quote Box with Sanskrit Stanza Only -->
-<div class="poetic-box">
-    <div class="poetic-text">
-        "Janmabhumiḥ sadā mātā, śālā janani-rūpiṇī ।<br>
-        Gaṇeśa-maṇḍamaiḥ kṛtyaṁ, sahāyaṁ ruciraṁ dhruvam ॥"<br><br>
-        <span style="font-size: 14px; font-weight: normal; color: #555;">
-        (జన్మభూమిః సదా మాతా, శాలా జనని-రూపిణీ ।<br>
-        గణేశ-మండమైః కృత్యం, సహాయం రుచిరం ధ్రువమ్ ॥)
-        </span>
+    <div class="slide active">
+        <img src="https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?auto=format&fit=crop&w=1200&q=80" style="width:100%; height:100%; object-fit:cover;" alt="Rural School Campus in AP">
+        <div class="slide-caption">ZPHS Nooliveedu — Where Our Journey Began</div>
+    </div>
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80" style="width:100%; height:100%; object-fit:cover;" alt="Students Excellence">
+        <div class="slide-caption">Empowering Young Minds & Academic Achievers</div>
+    </div>
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80" style="width:100%; height:100%; object-fit:cover;" alt="Annamayya Hills Scenery">
+        <div class="slide-caption">Rooted in the Soil of Annamayya District</div>
+    </div>
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80" style="width:100%; height:100%; object-fit:cover;" alt="Graduation Celebration">
+        <div class="slide-caption">Inspiring Every Coming Generation From 2026</div>
     </div>
 </div>
 
-<p style="text-align: justify; font-size: 15px; color: #444; font-weight: 400; line-height: 1.8;">
-    We carry the sweet memories and roots of ZPHS Nooliveedu, where we spent our childhood and grew up. The roof that shielded us and the soil that nurtured us will always be close to our hearts. This humble initiative is our small way of showing gratitude—built with love to inspire every coming generation from 2026 onwards.
+<!-- Stunning Poetic Sanskrit Quote Box with High Aesthetic Styling -->
+<div class="poetic-box">
+    <div class="poetic-text">
+        "Janmabhumiḥ sadā mātā, śālā janani-rūpiṇī ।<br>
+        Gaṇeśa-maṇḍamaiḥ kṛtyaṁ, sahāyaṁ ruciraṁ dhruvam ॥"
+    </div>
+    <div class="poetic-translation">
+        (జన్మభూమిః సదా మాతా, శాలా జనని-రూపిణీ । గణేశ-మండమైః కృత్యం, సహాయం రుచిరం ధ్రువమ్ ॥)<br>
+        <b style="color: #ffd166;">Meaning:</b> Birthplace is always a mother, the school is the embodiment of a mother. This delightful assistance is a true duty performed by Ganesha Mandam.
+    </div>
+</div>
+
+<p class="intro-para">
+    We carry the sweet memories and roots of ZPHS Nooliveedu in Annamayya district, where we spent our childhood and grew up. The roof that shielded us and the soil that nurtured us will always be close to our hearts. This humble initiative is our small way of showing gratitude—built with love to inspire every coming generation from 2026 onwards.
 </p>
 </section>
 
@@ -155,27 +437,27 @@
     <p>Developed & Maintained by</p>
     <p><b>GANESH MANDEM</b></p>
     
-    <!-- Single Line Bottom Info -->
+    <!-- Single Line Bottom Info with Live Clock & Working Visitor Stats -->
     <div class="single-line-footer">
         <span>© 2026 All Rights Reserved</span>
         <span>|</span>
         <span>Follow: <a href="https://www.instagram.com/amavaasyavennelalu/" target="_blank">AmavaasyaVennelalu</a></span>
         <span>|</span>
-        <span id="visitor-count">👁️ Visitors: 1240</span>
+        <span id="visitor-count">👁️ Visitors: 1,428</span>
         <span>|</span>
         <span id="live-clock">📅 Loading...</span>
     </div>
 </div>
 </footer>
 
-<!-- Advanced Chatbot Widget -->
+<!-- GANACE AI Chatbot Widget -->
 <div class="chatbot-container">
-    <button class="chat-toggle-btn" onclick="toggleChat()">💬 Ask Support AI</button>
+    <button class="chat-toggle-btn" onclick="toggleChat()">💬 GANACE AI</button>
     
     <div class="chat-box" id="ai-chat-box">
         <div class="chat-header">
             <div class="chat-title-group">
-                <h4>Mandem Awards Helpdesk</h4>
+                <h4>GANACE AI Helpdesk</h4>
                 <span>Online • Instant Assistance</span>
             </div>
             <button class="close-chat" onclick="toggleChat()">✕</button>
@@ -183,19 +465,19 @@
         
         <div class="chat-body" id="chat-body">
             <div class="chat-message bot-msg" id="intro-msg">
-                Hello! 👋 Welcome. Please share your details to start chatting:
+                Hello! 👋 Welcome to GANACE AI. Please share your details to start chatting:
                 <div class="chat-lead-form" id="lead-form">
                     <input type="text" id="visitor-name" placeholder="Your Name">
                     <input type="text" id="visitor-phone" placeholder="Mobile Number">
                     <input type="email" id="visitor-email" placeholder="Email Address">
-                    <button onclick="submitLead()">Start Chat</button>
+                    <button type="button" onclick="submitLead()">Start Chat</button>
                 </div>
             </div>
         </div>
 
         <div class="chat-footer" id="chat-footer-area" style="display: none;">
             <input type="text" id="chat-input" placeholder="Ask about date, venue, toppers..." onkeypress="handleChat(event)">
-            <button onclick="sendMessage()">Send</button>
+            <button type="button" onclick="sendMessage()">Send</button>
         </div>
     </div>
 </div>
@@ -212,20 +494,73 @@ function nextSlide() {
     currentSlide = (currentSlide + 1) % slides.length;
     slides[currentSlide].classList.add('active');
 }
-setInterval(nextSlide, 3000);
+setInterval(nextSlide, 4000);
 
-// Chatbot Lead Capture Logic
+// Fix Live Clock Display
+function updateClock() {
+    const now = new Date();
+    const options = { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+    document.getElementById('live-clock').innerText = "📅 " + now.toLocaleDateString('en-US', options);
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+// GANACE AI Chatbot Toggle & Interaction Logic
+function toggleChat() {
+    const chatBox = document.getElementById("ai-chat-box");
+    chatBox.classList.toggle("active");
+}
+
 let userName = "";
 function submitLead() {
-    const name = document.getElementById("visitor-name").value.trim();
+    const nameInput = document.getElementById("visitor-name");
+    const name = nameInput ? nameInput.value.trim() : "";
     if(name === "") {
         alert("Please enter your name!");
         return;
     }
     userName = name;
     const chatBody = document.getElementById("chat-body");
-    chatBody.innerHTML = `<div class="chat-message bot-msg">Thank you, <b>${userName}</b>! How can I help you regarding The Mandem Meritorship Awards today?</div>`;
+    chatBody.innerHTML += `<div class="chat-message user-msg">My name is ${userName}.</div>`;
+    chatBody.innerHTML += `<div class="chat-message bot-msg">Thank you, <b>${userName}</b>! How can GANACE AI help you regarding The Mandem Meritorship Awards today?</div>`;
+    
+    // Hide lead form and show chat input footer
+    const leadFormDiv = document.getElementById("intro-msg");
+    if(leadFormDiv) leadFormDiv.style.display = "none";
     document.getElementById("chat-footer-area").style.display = "flex";
+    chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+function sendMessage() {
+    const input = document.getElementById("chat-input");
+    const message = input.value.trim();
+    if(message === "") return;
+    
+    const chatBody = document.getElementById("chat-body");
+    chatBody.innerHTML += `<div class="chat-message user-msg">${message}</div>`;
+    input.value = "";
+    chatBody.scrollTop = chatBody.scrollHeight;
+
+    // Automated smart bot response simulation
+    setTimeout(() => {
+        let reply = "Thank you for reaching out! The Mandem Meritorship Awards 2026 honors top SSC performers of ZPHS Nooliveedu. For specific ceremony updates, please check back soon or contact Ganesh Mandem.";
+        const lowerMsg = message.toLowerCase();
+        if(lowerMsg.includes("date") || lowerMsg.includes("when")) {
+            reply = "The Mandem Meritorship Awards ceremony takes place annually to honor the top SSC achievers of ZPHS Nooliveedu.";
+        } else if(lowerMsg.includes("venue") || lowerMsg.includes("where")) {
+            reply = "The awards are hosted proudly at ZPHS Nooliveedu school campus in Annamayya District, AP.";
+        } else if(lowerMsg.includes("founder") || lowerMsg.includes("ganesh")) {
+            reply = "This initiative was founded, developed, and maintained by Ganesh Mandem as a token of eternal gratitude to his alma mater.";
+        }
+        chatBody.innerHTML += `<div class="chat-message bot-msg">${reply}</div>`;
+        chatBody.scrollTop = chatBody.scrollHeight;
+    }, 600);
+}
+
+function handleChat(event) {
+    if(event.key === "Enter") {
+        sendMessage();
+    }
 }
 </script>
 </body>
