@@ -1,15 +1,4 @@
-function updateDateTime(){
-
-let now=new Date();
-
-document.getElementById("date").innerHTML=
-"📅 "+now.toLocaleDateString();
-
-document.getElementById("time").innerHTML=
-"🕒 "+now.toLocaleTimeString();
-
-}
-
-setInterval(updateDateTime,1000);
-
-updateDateTime();
+// Basic JavaScript for The Mandem Meritorship Awards website
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("The Mandem Meritorship Awards website loaded successfully!");
+});
