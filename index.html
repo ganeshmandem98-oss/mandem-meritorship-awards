@@ -6,12 +6,105 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Mandem Meritorship Awards - 2026</title>
 <link rel="stylesheet" href="style.css">
+<style>
+/* Slider Styles for Moving Pictures */
+.slider-container {
+    max-width: 600px;
+    height: 350px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background: #000;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* Poetic Quote Box */
+.poetic-box {
+    background: #f0f4f8;
+    border-left: 5px solid #ee6c4d;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 0 10px 10px 0;
+    text-align: center;
+}
+
+.poetic-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0b2545;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+/* Single Line Footer */
+.single-line-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 13px;
+    color: #8da9c4;
+    margin-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 15px;
+}
+
+.single-line-footer a {
+    color: #ee6c4d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.single-line-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Lead Form inside Chatbot */
+.chat-lead-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+}
+
+.chat-lead-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.chat-lead-form button {
+    background: #134074;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-<img src="images/logo.png" class="logo">
+<img src="images/logo.png" class="logo" style="display: block; margin: 0 auto 5px auto;">
 <h1>THE MANDEM MERITORSHIP AWARDS</h1>
 <p>"Celebrating Excellence • Inspiring Futures"</p>
 <nav>
@@ -28,34 +121,55 @@
 </header>
 
 <section>
-<h2>WELCOME TO THE AWARDS</h2>
-<p>
-Welcome to the official web portal of **The Mandem Meritorship Awards**. This initiative is dedicated to recognizing and honoring academic excellence among students, inspiring them to reach greater heights in their educational journey.
-</p>
-<p>
-Starting from 2026, we proudly recognize top-performing students from ZPHS Nooliveedu with cash prizes, certificates, and mementos to celebrate their hard work and dedication.
+<h2>WELCOME TO THE MANDEM MERITORSHIP AWARDS</h2>
+
+<!-- Moving Pictures Slideshow -->
+<div class="slider-container">
+    <img src="images/logo.png" class="slide active" alt="Logo">
+    <img src="images/campus.jpg" alt="School Campus" class="slide">
+    <img src="images/sreevani.jpg" alt="Student" class="slide">
+    <img src="images/group.jpg" alt="Group" class="slide">
+</div>
+
+<!-- Poetic Quote Box with Sanskrit Stanza & Translation -->
+<div class="poetic-box">
+    <div class="poetic-text">
+        "Janmabhumiḥ sadā mātā, śālā janani-rūpiṇī ।<br>
+        Gaṇeśa-maṇḍamaiḥ kṛtyaṁ, sahāyaṁ ruciraṁ dhruvam ॥"<br><br>
+        <span style="font-size: 14px; font-weight: normal; color: #555;">
+        (જన్మభూమిః సదా మాతా, శాలా జనని-రూపిణీ ।<br>
+        గణేశ-మండమైః కృత్యం, సహాయం రుచిరం ధ్రువమ్ ॥)<br><br>
+        "Janmabhumi is always a mother, the school is the embodiment of a mother.<br>
+        This delightful assistance is a true duty performed by Gaṇeśa Maṇḍam."
+        </span>
+    </div>
+</div>
+
+<p style="text-align: justify; font-size: 15px; color: #444; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.8;">
+    WE CARRY THE ROOTS OF ZPHS NOOLIVEEDU WHERE WE LIVED AND GREW UP. THE ROOF THAT SHIELDED US AND THE SOIL THAT NURTURED US WILL ALWAYS BE HONORED. THIS INITIATIVE IS OUR ETERNAL GRATITUDE—BUILT TO INSPIRE EVERY COMING GENERATION FROM 2026 ONWARDS.
 </p>
 </section>
 
 <footer>
-<div class="footer-content">
-    <div class="footer-left">
-        <p><b>Follow Us:</b><br><a href="https://www.instagram.com/amavaasyavennelalu/" target="_blank" style="color: #ee6c4d; text-decoration: none;">Instagram/AmavaasyaVennelalu</a></p>
-    </div>
-    <div class="footer-center">
-        <h3>THE MANDEM MERITORSHIP AWARDS</h3>
-        <p>From 2026 Onwards</p>
-        <hr>
-        <p>Developed & Maintained by<br><b>GANESH MANDEM</b></p>
-    </div>
-    <div class="footer-right">
-        <p id="visitor-count">👁️ Visitors: 1240</p>
-        <p id="live-clock" style="font-size: 12px; color: #8da9c4;">📅 Loading...</p>
+<div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+    <h3>THE MANDEM MERITORSHIP AWARDS</h3>
+    <p>From 2026 Onwards</p>
+    <p>Developed & Maintained by <b>GANESH MANDEM</b></p>
+    
+    <!-- Single Line Bottom Info -->
+    <div class="single-line-footer">
+        <span>© 2026 All Rights Reserved</span>
+        <span>|</span>
+        <span>Follow: <a href="https://www.instagram.com/amavaasyavennelalu/" target="_blank">AmavaasyaVennelalu</a></span>
+        <span>|</span>
+        <span id="visitor-count">👁️ Visitors: 1240</span>
+        <span>|</span>
+        <span id="live-clock">📅 Loading...</span>
     </div>
 </div>
 </footer>
 
-<!-- Flight Booking Style AI Chatbot Widget -->
+<!-- Advanced Chatbot Widget -->
 <div class="chatbot-container">
     <button class="chat-toggle-btn" onclick="toggleChat()">💬 Ask Support AI</button>
     
@@ -67,16 +181,53 @@ Starting from 2026, we proudly recognize top-performing students from ZPHS Nooli
             </div>
             <button class="close-chat" onclick="toggleChat()">✕</button>
         </div>
+        
         <div class="chat-body" id="chat-body">
-            <div class="chat-message bot-msg">Hello! 👋 Welcome to Mandem Awards. Ask me anything about date, venue, toppers, or founder!</div>
+            <div class="chat-message bot-msg" id="intro-msg">
+                Hello! 👋 Welcome. Please share your details to start chatting:
+                <div class="chat-lead-form" id="lead-form">
+                    <input type="text" id="visitor-name" placeholder="Your Name">
+                    <input type="text" id="visitor-phone" placeholder="Mobile Number">
+                    <input type="email" id="visitor-email" placeholder="Email Address">
+                    <button onclick="submitLead()">Start Chat</button>
+                </div>
+            </div>
         </div>
-        <div class="chat-footer">
-            <input type="text" id="chat-input" placeholder="Type your query here..." onkeypress="handleChat(event)">
+
+        <div class="chat-footer" id="chat-footer-area" style="display: none;">
+            <input type="text" id="chat-input" placeholder="Ask about date, venue, toppers..." onkeypress="handleChat(event)">
             <button onclick="sendMessage()">Send</button>
         </div>
     </div>
 </div>
 
 <script src="script.js"></script>
+<script>
+// Image Slider Logic
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+function nextSlide() {
+    if(slides.length === 0) return;
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+}
+setInterval(nextSlide, 3000);
+
+// Chatbot Lead Capture Logic
+let userName = "";
+function submitLead() {
+    const name = document.getElementById("visitor-name").value.trim();
+    if(name === "") {
+        alert("Please enter your name!");
+        return;
+    }
+    userName = name;
+    const chatBody = document.getElementById("chat-body");
+    chatBody.innerHTML = `<div class="chat-message bot-msg">Thank you, <b>${userName}</b>! How can I help you regarding The Mandem Meritorship Awards today?</div>`;
+    document.getElementById("chat-footer-area").style.display = "flex";
+}
+</script>
 </body>
 </html>
