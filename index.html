@@ -2,698 +2,618 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Mandem Meritorship Awards - 2026</title>
-    <style>
-        /* Global Reset & Body Styling */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f7f9fc;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Header Styling */
-        header {
-            background: #0b2545;
-            color: white;
-            padding: 25px 20px;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        .header-logo-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 12px;
-        }
-
-        header .logo {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #8da9c4;
-    margin-bottom: 5px;
-    background: white;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Mandem Meritorship Awards - 2026</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* Global Reset & Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-        header h1 {
-            margin: 10px 0 5px 0;
-            font-size: 28px;
-            letter-spacing: 1px;
-        }
+/* Header Styling - Restored compact, clean spacing for all pages */
+header {
+    background: linear-gradient(135deg, #0b2545 0%, #134074 100%);
+    color: white;
+    padding: 20px 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
 
-        header p {
-            margin: 0 0 15px 0;
-            font-size: 15px;
-            color: #8da9c4;
-            font-style: italic;
-        }
+header h1 {
+    margin: 5px 0;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
 
-        nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 15px;
-        }
+header p {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #8da9c4;
+    font-style: italic;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            padding: 6px 12px;
-            border-radius: 4px;
-            transition: background 0.3s;
-        }
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}
 
-        nav a:hover {
-            background: rgba(255,255,255,0.15);
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
 
-        /* Main Section Layout */
-        section {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 30px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-            min-height: 500px;
-        }
+nav a:hover {
+    background: rgba(255,255,255,0.15);
+}
 
-        section h2 {
-            text-align: center;
-            color: #0b2545;
-            margin-top: 0;
-            margin-bottom: 25px;
-            font-size: 24px;
-        }
+/* Main Section Layout */
+section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
 
-        /* Hero Slider */
-        .slider-container {
-            width: 100%;
-            height: 420px;
-            margin: 0 auto 30px auto;
-            position: relative;
-            overflow: hidden;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(11,37,69,0.2);
-            background: #0b2545;
-        }
+section h2 {
+    text-align: center;
+    color: #0b2545;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
 
-        .slide {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            transition: opacity 1.2s ease-in-out;
-        }
+/* Enhanced High-Aesthetic Hero Slider (5-6 rich contextual slides) */
+.slider-container {
+    width: 100%;
+    height: 400px;
+    margin: 0 auto 25px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(11,37,69,0.2);
+    background: #000;
+}
 
-        .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out, transform 6s ease-out;
+    transform: scale(1);
+}
 
-        .slide.active {
-            opacity: 1;
-        }
+.slide.active {
+    opacity: 1;
+    transform: scale(1.05);
+}
 
-        .slide-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(11,37,69,0.95), rgba(11,37,69,0.3), transparent);
-            color: white;
-            padding: 30px 20px 18px 20px;
-            text-align: center;
-            font-size: 16px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
-            z-index: 2;
-        }
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(11,37,69,0.85), transparent);
+    color: white;
+    padding: 25px 20px 15px 20px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    z-index: 2;
+}
 
-        /* Audio Controls Overlay */
-        .audio-control-bar {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            z-index: 10;
-            background: rgba(11, 37, 69, 0.9);
-            padding: 8px 16px;
-            border-radius: 20px;
-            color: white;
-            font-size: 13px;
-            font-weight: bold;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-            border: 1px solid rgba(255,255,255,0.3);
-            outline: none;
-        }
+/* Stunning Glassmorphic / Gradient Sanskrit Quote Box */
+.poetic-box {
+    background: linear-gradient(135deg, #134074 0%, #0b2545 100%);
+    border-left: 6px solid #ee6c4d;
+    padding: 30px 25px;
+    margin: 25px 0;
+    border-radius: 0 14px 14px 0;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(19,64,116,0.25);
+    color: #ffffff;
+}
 
-        .audio-control-bar:hover {
-            background: #ee6c4d;
-        }
+.poetic-text {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.8;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
 
-        /* Poetic Quote Box */
-        .poetic-box {
-            background: linear-gradient(135deg, #134074 0%, #0b2545 100%);
-            border-left: 6px solid #ee6c4d;
-            padding: 35px 30px;
-            margin: 30px 0;
-            border-radius: 0 14px 14px 0;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(19,64,116,0.25);
-            color: #ffffff;
-        }
+.poetic-translation {
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #e2e8f0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 15px;
+    font-style: normal;
+}
 
-        .poetic-text {
-            font-size: 18px;
-            font-weight: 600;
-            line-height: 1.8;
-            font-style: italic;
-            color: #ffffff;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
+/* Descriptive Paragraph */
+.intro-para {
+    text-align: justify;
+    font-size: 14px;
+    color: #444;
+    font-weight: 400;
+    line-height: 1.8;
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
 
-        .poetic-translation {
-            margin-top: 15px;
-            font-size: 14px;
-            font-weight: 400;
-            color: #e2e8f0;
-            border-top: 1px solid rgba(255,255,255,0.2);
-            padding-top: 15px;
-            font-style: normal;
-        }
+/* Video / BGM Section Styling */
+.media-section {
+    margin: 30px 0;
+    text-align: center;
+    background: #f1f5f9;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+}
 
-        .poetic-translation b {
-            color: #ffd166;
-        }
+.media-section h3 {
+    margin-top: 0;
+    color: #0b2545;
+    font-size: 18px;
+}
 
-        /* Paragraph Styling */
-        .intro-para {
-            text-align: justify;
-            font-size: 15px;
-            color: #444;
-            font-weight: 400;
-            line-height: 1.9;
-            background: #f8fafc;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #e2e8f0;
-        }
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    height: 380px;
+    margin: 15px auto 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
 
-        /* Footer */
-        footer {
-            background: #0b2545;
-            color: white;
-            padding: 40px 20px 25px 20px;
-            margin-top: 50px;
-        }
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
 
-        footer h3 {
-            margin: 0 0 5px 0;
-            font-size: 18px;
-            letter-spacing: 0.5px;
-        }
+/* Footer Design */
+footer {
+    background: #0b2545;
+    color: white;
+    padding: 30px 20px 20px 20px;
+    margin-top: 40px;
+}
 
-        footer p {
-            margin: 5px 0;
-            color: #8da9c4;
-            font-size: 14px;
-        }
+footer h3 {
+    margin: 0 0 5px 0;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+}
 
-        .single-line-footer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            font-size: 13px;
-            color: #8da9c4;
-            margin-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 15px;
-        }
+footer p {
+    margin: 4px 0;
+    color: #8da9c4;
+    font-size: 13px;
+}
 
-        .single-line-footer a {
-            color: #ee6c4d;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.single-line-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 12px;
+    color: #8da9c4;
+    margin-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 12px;
+}
 
-        .single-line-footer a:hover {
-            text-decoration: underline;
-        }
+.single-line-footer a {
+    color: #ee6c4d;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        /* GANACE AI Chatbot Widget */
-        .chatbot-container {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            z-index: 1000;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+.single-line-footer a:hover {
+    text-decoration: underline;
+}
 
-        .chat-toggle-btn {
-            background: #ee6c4d;
-            color: white;
-            border: none;
-            padding: 12px 22px;
-            border-radius: 30px;
-            font-size: 15px;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(238,108,77,0.4);
-            transition: transform 0.2s, background 0.2s;
-        }
+/* GANACE AI Chatbot Widget Styles */
+.chatbot-container {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-        .chat-toggle-btn:hover {
-            background: #d95332;
-            transform: scale(1.05);
-        }
+.chat-toggle-btn {
+    background: #ee6c4d;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(238,108,77,0.4);
+    transition: transform 0.2s, background 0.2s;
+}
 
-        .chat-box {
-            display: none;
-            position: absolute;
-            bottom: 60px;
-            right: 0;
-            width: 330px;
-            height: 440px;
-            background: white;
-            border-radius: 14px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            flex-direction: column;
-            overflow: hidden;
-            border: 1px solid #e2e8f0;
-        }
+.chat-toggle-btn:hover {
+    background: #d95332;
+    transform: scale(1.05);
+}
 
-        .chat-box.active {
-            display: flex;
-        }
+.chat-box {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    width: 330px;
+    height: 440px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
 
-        .chat-header {
-            background: #0b2545;
-            color: white;
-            padding: 14px 16px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.chat-box.active {
+    display: flex;
+}
 
-        .chat-title-group h4 {
-            margin: 0;
-            font-size: 16px;
-        }
+.chat-header {
+    background: #0b2545;
+    color: white;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .chat-title-group span {
-            font-size: 11px;
-            color: #8da9c4;
-        }
+.chat-title-group h4 {
+    margin: 0;
+    font-size: 16px;
+}
 
-        .close-chat {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 18px;
-            cursor: pointer;
-        }
+.chat-title-group span {
+    font-size: 11px;
+    color: #8da9c4;
+}
 
-        .chat-body {
-            flex: 1;
-            padding: 15px;
-            overflow-y: auto;
-            background: #f8fafc;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
+.close-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
 
-        .chat-message {
-            padding: 10px 14px;
-            border-radius: 8px;
-            font-size: 13px;
-            max-width: 85%;
-            line-height: 1.4;
-        }
+.chat-body {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-        .bot-msg {
-            background: #e2e8f0;
-            color: #0b2545;
-            align-self: flex-start;
-        }
+.chat-message {
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    max-width: 85%;
+    line-height: 1.4;
+}
 
-        .user-msg {
-            background: #134074;
-            color: white;
-            align-self: flex-end;
-        }
+.bot-msg {
+    background: #e2e8f0;
+    color: #0b2545;
+    align-self: flex-start;
+}
 
-        .chat-lead-form {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-top: 8px;
-        }
+.user-msg {
+    background: #134074;
+    color: white;
+    align-self: flex-end;
+}
 
-        .chat-lead-form input {
-            padding: 8px 10px;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            font-size: 13px;
-            outline: none;
-        }
+.chat-lead-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+}
 
-        .chat-lead-form button {
-            background: #134074;
-            color: white;
-            border: none;
-            padding: 8px;
-            border-radius: 6px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
+.chat-lead-form input {
+    padding: 8px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 13px;
+    outline: none;
+}
 
-        .chat-lead-form button:hover {
-            background: #0b2545;
-        }
+.chat-lead-form button {
+    background: #134074;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
 
-        .chat-footer {
-            display: flex;
-            padding: 10px;
-            background: white;
-            border-top: 1px solid #e2e8f0;
-            gap: 8px;
-        }
+.chat-lead-form button:hover {
+    background: #0b2545;
+}
 
-        .chat-footer input {
-            flex: 1;
-            padding: 8px 10px;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            font-size: 13px;
-            outline: none;
-        }
+.chat-footer {
+    display: flex;
+    padding: 10px;
+    background: white;
+    border-top: 1px solid #e2e8f0;
+    gap: 8px;
+}
 
-        .chat-footer button {
-            background: #134074;
-            color: white;
-            border: none;
-            padding: 8px 14px;
-            border-radius: 6px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-    </style>
+.chat-footer input {
+    flex: 1;
+    padding: 8px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 13px;
+    outline: none;
+}
+
+.chat-footer button {
+    background: #134074;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+</style>
 </head>
 
 <body>
 
-    <header>
-        <!-- Logo Header Container -->
-        <div class="header-logo-container">
-            <img src="images/logo.png" alt="Mandem Meritorship Emblem" class="site-logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/2991/2991108.png'">
+<header>
+<img src="images/logo.png" class="logo" style="display: block; margin: 0 auto 5px auto;" alt="Logo" width="45">
+<h1>THE MANDEM MERITORSHIP AWARDS</h1>
+<p>"Celebrating Excellence • Inspiring Futures"</p>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="founder.html">Founder</a>
+<a href="recipients.html">Recipients</a>
+<a href="memory.html">In Memory Of</a>
+<a href="ceremony.html">Ceremony</a>
+<a href="gallery.html">Gallery</a>
+<a href="news.html">News</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<section>
+<h2>WELCOME TO THE MANDEM MERITORSHIP AWARDS</h2>
+
+<!-- 6-Slide High-Aesthetic Hero Slideshow (ZPHS Nooliveedu, rural kids, awards presentation, map pin location) -->
+<div class="slider-container">
+    <div class="slide active">
+        <img src="https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?auto=format&fit=crop&w=1200&q=80" alt="ZPHS Nooliveedu School Campus">
+        <div class="slide-caption">ZPHS Nooliveedu School Campus — Annamayya District, AP</div>
+    </div>
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80" alt="Rural School Children">
+        <div class="slide-caption">Bright Minds & Inspiring Students from Rural Backdrop</div>
+    </div>
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80" alt="Memento & Scholarship Presentation">
+        <div class="slide-caption">Honoring Top SSC Achievers with Mementos & Cash Prizes</div>
+    </div>
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80" alt="Award Ceremony Distribution">
+        <div class="slide-caption">Encouraging Academic Excellence & Future Leaders</div>
+    </div>
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=80" alt="Map Location Coordinates Pin">
+        <div class="slide-caption">📍 ZPHS Nooliveedu Coordinates Pin — Rooted in Annamayya District</div>
+    </div>
+    <div class="slide">
+        <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80" alt="Library & Learning">
+        <div class="slide-caption">Building a Legacy of Gratitude from 2026 Onwards</div>
+    </div>
+</div>
+
+<!-- Stunning Poetic Sanskrit Quote Box -->
+<div class="poetic-box">
+    <div class="poetic-text">
+        "Janmabhumiḥ Sadā Mātā, Sālā Janani-rūpiṇī ।<br>
+        Gaṇeśa-Maṇḍemaiḥ Kṛtyaṁ, Sahāyaṁ Ruciraṁ Dhruvam ॥"
+    </div>
+    <div class="poetic-translation">
+        (జన్మభూమిః సదా మాతా, శాలా జనని-రూపిణీ । గణేశ-మండమైః కృత్యం, సహాయం రుచిరం ధ్రువమ్ ॥)<br>
+        
+        <b style="color: #ffd166;">Meaning:</b> Birthplace is always a mother, the school is the embodiment of a mother. This delightful assistance is a true duty performed by Ganesha Mandam.
+    </div>
+</div>
+
+<p class="intro-para">
+    We carry the sweet memories and roots of ZPHS Nooliveedu in Annamayya District, AP, where we spent our childhood and grew up. The roof that shielded us and the soil that nurtured us will always be close to our hearts. This humble initiative is our small way of showing gratitude—built with love to inspire every coming generation from 2026 onwards.
+</p>
+
+<!-- Telugu BGM / Video Tribute Section -->
+<div class="media-section">
+    <h3>🎵 Tributes to Our Roots & Alma Mater</h3>
+    <p style="font-size: 13px; color: #64748b; margin-bottom: 10px;">Experience the nostalgic emotion of our school days and homeland.</p>
+    <div class="video-container">
+        <!-- Embedded emotional background musical video tribute -->
+        <iframe src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=0&mute=1&loop=1" title="Telugu School BGM Tribute" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+</section>
+
+<footer>
+<div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+    <h3>THE MANDEM MERITORSHIP AWARDS</h3>
+    <p>From 2026 Onwards</p>
+    <p>Developed & Maintained by</p>
+    <p><b>GANESH MANDEM</b></p>
+    
+    <!-- Single Line Bottom Info with Live Clock & Visitor Stats -->
+    <div class="single-line-footer">
+        <span>© 2026 All Rights Reserved</span>
+        <span>|</span>
+        <span>Follow: <a href="https://www.instagram.com/amavaasyavennelalu/" target="_blank">AmavaasyaVennelalu</a></span>
+        <span>|</span>
+        <span id="visitor-count">👁️ Visitors: 100/span>
+        <span>|</span>
+        <span id="live-clock">📅 Loading...</span>
+    </div>
+</div>
+</footer>
+
+<!-- GANACE AI Chatbot Widget -->
+<div class="chatbot-container">
+    <button class="chat-toggle-btn" onclick="toggleChat()">💬 GANACE AI</button>
+    
+    <div class="chat-box" id="ai-chat-box">
+        <div class="chat-header">
+            <div class="chat-title-group">
+                <h4>GANACE AI Helpdesk</h4>
+                <span>Online • Instant Assistance</span>
+            </div>
+            <button class="close-chat" onclick="toggleChat()">✕</button>
         </div>
         
-        <h1>THE MANDEM MERITORSHIP AWARDS</h1>
-        <p>"Celebrating Excellence • Inspiring Futures"</p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="founder.html">Founder</a>
-            <a href="recipients.html">Recipients</a>
-            <a href="memory.html">In Memory Of</a>
-            <a href="ceremony.html">Ceremony</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="news.html">News</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-
-    <section>
-        <h2>WELCOME TO THE MANDEM MERITORSHIP AWARDS</h2>
-
-        <div class="slider-container">
-            <!-- Audio MP3 Stream -->
-            <audio id="bgm-audio" loop preload="auto">
-                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-            </audio>
-
-            <button class="audio-control-bar" onclick="toggleAudio()" id="audio-btn" type="button">
-                🎵 Play Inspiring BGM
-            </button>
-
-            <!-- Slide 1 -->
-            <div class="slide active">
-                <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80" alt="School Building Campus">
-                <div class="slide-caption">ZPHS Nooliveedu School Campus — Annamayya District, AP</div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="slide">
-                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80" alt="Students in Classroom">
-                <div class="slide-caption">Dedicated Students Learning Together in a Rural Classroom Setup</div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="slide">
-                <img src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&w=1200&q=80" alt="Award Trophy and Certificate">
-                <div class="slide-caption">Honoring Hardworking Students with Meritorship & Cash Awards</div>
-            </div>
-
-            <!-- Slide 4 -->
-            <div class="slide">
-                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" alt="Students Celebrating Success">
-                <div class="slide-caption">Encouraging Academic Excellence & Inspiring Next Generations</div>
-            </div>
-
-            <!-- Slide 5 -->
-            <div class="slide">
-                <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80" alt="Library and Study Material">
-                <div class="slide-caption">Rooted in Hometown Values — Built From 2026 Onwards</div>
-            </div>
-        </div>
-
-        <div class="poetic-box">
-            <div class="poetic-text">
-                "Janmabhumiḥ Sadā Mātā, Sālā Janani-rūpiṇī ।<br>
-                Gaṇeśa-Maṇḍemaiḥ Kṛtyaṁ, Sahāyaṁ Ruciraṁ Dhruvam ॥"
-            </div>
-            <div class="poetic-translation">
-                (జన్మభూమిః సదా మాతా, శాలా జనని-రూపిణీ।
-                గణేశ-మండమైః కృత్యం, సహాయం రుచిరం ధ్రువమ్ ॥)<br>
-                <b>Meaning:</b> Birthplace is always a mother, the school is the embodiment of a mother. This delightful assistance is a true duty performed by Ganesha Mandam.
-            </div>
-        </div>
-
-        <p class="intro-para">
-            We carry the sweet memories and roots of ZPHS Nooliveedu in Annamayya District, AP, where we spent our childhood and grew up. The roof that shielded us and the soil that nurtured us will always be close to our hearts. This humble initiative is our small way of showing gratitude—built with love to inspire every coming generation from 2026 onwards.
-        </p>
-    </section>
-
-    <footer>
-        <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
-            <h3>THE MANDEM MERITORSHIP AWARDS</h3>
-            <p>From 2026 Onwards</p>
-            <p>Developed & Maintained by</p>
-            <p><b>GANESH MANDEM</b></p>
-            
-            <div class="single-line-footer">
-                <span>© 2026 All Rights Reserved</span>
-                <span>|</span>
-                <span>Follow: <a href="https://www.instagram.com/amavaasyavennelalu/" target="_blank" rel="noopener noreferrer">AmavaasyaVennelalu</a></span>
-                <span>|</span>
-                <span id="visitor-count">👁️ Visitors: 10 </span>
-                <span>|</span>
-                <span id="live-clock">📅 Loading...</span>
-            </div>
-        </div>
-    </footer>
-
-    <div class="chatbot-container">
-        <button class="chat-toggle-btn" onclick="toggleChat()" type="button">💬 GANACE AI</button>
-        
-        <div class="chat-box" id="ai-chat-box">
-            <div class="chat-header">
-                <div class="chat-title-group">
-                    <h4>GANACE AI Helpdesk</h4>
-                    <span>Online • Instant Assistance</span>
-                </div>
-                <button class="close-chat" onclick="toggleChat()" type="button">✕</button>
-            </div>
-            
-            <div class="chat-body" id="chat-body">
-                <div class="chat-message bot-msg" id="intro-msg">
-                    Hello! 👋 Welcome to GANACE AI. Please share your details to start chatting:
-                    <div class="chat-lead-form" id="lead-form">
-                        <input type="text" id="visitor-name" placeholder="Your Name">
-                        <input type="text" id="visitor-phone" placeholder="Mobile Number">
-                        <input type="email" id="visitor-email" placeholder="Email Address">
-                        <button type="button" onclick="submitLead()">Start Chat</button>
-                    </div>
+        <div class="chat-body" id="chat-body">
+            <div class="chat-message bot-msg" id="intro-msg">
+                Hello! 👋 Welcome to GANACE AI. Please share your details to start chatting:
+                <div class="chat-lead-form" id="lead-form">
+                    <input type="text" id="visitor-name" placeholder="Your Name">
+                    <input type="text" id="visitor-phone" placeholder="Mobile Number">
+                    <input type="email" id="visitor-email" placeholder="Email Address">
+                    <button type="button" onclick="submitLead()">Start Chat</button>
                 </div>
             </div>
+        </div>
 
-            <div class="chat-footer" id="chat-footer-area" style="display: none;">
-                <input type="text" id="chat-input" placeholder="Ask about date, venue, toppers..." onkeypress="handleChat(event)">
-                <button type="button" onclick="sendMessage()">Send</button>
-            </div>
+        <div class="chat-footer" id="chat-footer-area" style="display: none;">
+            <input type="text" id="chat-input" placeholder="Ask about date, venue, toppers..." onkeypress="handleChat(event)">
+            <button type="button" onclick="sendMessage()">Send</button>
         </div>
     </div>
+</div>
 
-    <script>
-        // Image Slider Logic
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
+<script src="script.js"></script>
+<script>
+// Image Slider Logic (6 Slides)
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
 
-        function nextSlide() {
-            if (slides.length === 0) return;
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active');
+function nextSlide() {
+    if(slides.length === 0) return;
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+}
+setInterval(nextSlide, 4000);
+
+// Fix Live Clock Display
+function updateClock() {
+    const now = new Date();
+    const options = { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+    document.getElementById('live-clock').innerText = "📅 " + now.toLocaleDateString('en-US', options);
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+// GANACE AI Chatbot Toggle & Interaction Logic
+function toggleChat() {
+    const chatBox = document.getElementById("ai-chat-box");
+    chatBox.classList.toggle("active");
+}
+
+let userName = "";
+function submitLead() {
+    const nameInput = document.getElementById("visitor-name");
+    const name = nameInput ? nameInput.value.trim() : "";
+    if(name === "") {
+        alert("Please enter your name!");
+        return;
+    }
+    userName = name;
+    const chatBody = document.getElementById("chat-body");
+    chatBody.innerHTML += `<div class="chat-message user-msg">My name is ${userName}.</div>`;
+    chatBody.innerHTML += `<div class="chat-message bot-msg">Thank you, <b>${userName}</b>! How can GANACE AI help you regarding The Mandem Meritorship Awards today?</div>`;
+    
+    // Hide lead form and show chat input footer
+    const leadFormDiv = document.getElementById("intro-msg");
+    if(leadFormDiv) leadFormDiv.style.display = "none";
+    document.getElementById("chat-footer-area").style.display = "flex";
+    chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+function sendMessage() {
+    const input = document.getElementById("chat-input");
+    const message = input.value.trim();
+    if(message === "") return;
+    
+    const chatBody = document.getElementById("chat-body");
+    chatBody.innerHTML += `<div class="chat-message user-msg">${message}</div>`;
+    input.value = "";
+    chatBody.scrollTop = chatBody.scrollHeight;
+
+    // Automated smart bot response simulation
+    setTimeout(() => {
+        let reply = "Thank you for reaching out! The Mandem Meritorship Awards 2026 honors top SSC performers of ZPHS Nooliveedu in Annamayya District. For specific ceremony updates, please check back soon or contact Ganesh Mandem.";
+        const lowerMsg = message.toLowerCase();
+        if(lowerMsg.includes("date") || lowerMsg.includes("when")) {
+            reply = "The Mandem Meritorship Awards ceremony takes place annually to honor top SSC achievers of ZPHS Nooliveedu.";
+        } else if(lowerMsg.includes("venue") || lowerMsg.includes("where")) {
+            reply = "The awards are hosted proudly at ZPHS Nooliveedu school campus in Annamayya District, AP.";
+        } else if(lowerMsg.includes("founder") || lowerMsg.includes("ganesh")) {
+            reply = "This initiative was founded, developed, and maintained by Ganesh Mandem as a token of eternal gratitude to his alma mater.";
         }
-        if (slides.length > 0) {
-            setInterval(nextSlide, 4000);
-        }
+        chatBody.innerHTML += `<div class="chat-message bot-msg">${reply}</div>`;
+        chatBody.scrollTop = chatBody.scrollHeight;
+    }, 600);
+}
 
-        // Audio Toggle Logic
-        let isPlaying = false;
-        function toggleAudio() {
-            const audio = document.getElementById('bgm-audio');
-            const btn = document.getElementById('audio-btn');
-            if (!audio || !btn) return;
-
-            if (isPlaying) {
-                audio.pause();
-                btn.innerHTML = "🎵 Play Inspiring BGM";
-                isPlaying = false;
-            } else {
-                audio.play().then(() => {
-                    btn.innerHTML = "⏸️ Pause BGM";
-                    isPlaying = true;
-                }).catch((err) => {
-                    console.error("Audio playback error:", err);
-                    alert("Please click Play again!");
-                });
-            }
-        }
-
-        // Live Clock Display
-        function updateClock() {
-            const clockEl = document.getElementById('live-clock');
-            if (!clockEl) return;
-            const now = new Date();
-            const options = { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
-            clockEl.innerText = "📅 " + now.toLocaleDateString('en-US', options);
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
-
-        // Realistic Dynamic Visitor Counter Logic
-        let baseVisitors = localStorage.getItem('site_visitors');
-        if (!baseVisitors) {
-            baseVisitors = 0;
-        } else {
-            baseVisitors = parseInt(baseVisitors, 10) + Math.floor(Math.random() * 3) + 1;
-        }
-        localStorage.setItem('site_visitors', baseVisitors);
-
-        const visitorEl = document.getElementById('visitor-count');
-        if (visitorEl) {
-            visitorEl.innerText = "👁️ Visitors: " + Number(baseVisitors).toLocaleString();
-        }
-
-        // GANACE AI Chatbot Logic
-        function toggleChat() {
-            const chatBox = document.getElementById("ai-chat-box");
-            if (chatBox) chatBox.classList.toggle("active");
-        }
-
-        function appendChatMessage(role, text) {
-            const chatBody = document.getElementById("chat-body");
-            if (!chatBody) return;
-
-            const msgDiv = document.createElement("div");
-            msgDiv.className = `chat-message ${role}-msg`;
-            msgDiv.textContent = text;
-            chatBody.appendChild(msgDiv);
-            chatBody.scrollTop = chatBody.scrollHeight;
-        }
-
-        let userName = "";
-        function submitLead() {
-            const nameInput = document.getElementById("visitor-name");
-            const name = nameInput ? nameInput.value.trim() : "";
-            if (name === "") {
-                alert("Please enter your name!");
-                return;
-            }
-            userName = name;
-            
-            appendChatMessage("user", `My name is ${userName}.`);
-            
-            const chatBody = document.getElementById("chat-body");
-            if (chatBody) {
-                const botWelcome = document.createElement("div");
-                botWelcome.className = "chat-message bot-msg";
-                botWelcome.innerHTML = `Thank you, <b>${userName.replace(/</g, "&lt;")}</b>! How can GANACE AI help you regarding The Mandem Meritorship Awards today?`;
-                chatBody.appendChild(botWelcome);
-            }
-            
-            const leadFormDiv = document.getElementById("lead-form");
-            if (leadFormDiv) leadFormDiv.style.display = "none";
-            
-            const chatFooter = document.getElementById("chat-footer-area");
-            if (chatFooter) chatFooter.style.display = "flex";
-
-            if (chatBody) chatBody.scrollTop = chatBody.scrollHeight;
-        }
-
-        function sendMessage() {
-            const input = document.getElementById("chat-input");
-            if (!input) return;
-            const message = input.value.trim();
-            if (message === "") return;
-            
-            appendChatMessage("user", message);
-            input.value = "";
-
-            setTimeout(() => {
-                let reply = "Thank you for reaching out! The Mandem Meritorship Awards 2026 honors top SSC performers of ZPHS Nooliveedu in Annamayya District. For specific ceremony updates, please check back soon or contact Ganesh Mandem.";
-                const lowerMsg = message.toLowerCase();
-                
-                if (lowerMsg.includes("date") || lowerMsg.includes("when")) {
-                    reply = "The Mandem Meritorship Awards ceremony takes place annually to honor top SSC achievers of ZPHS Nooliveedu.";
-                } else if (lowerMsg.includes("venue") || lowerMsg.includes("where")) {
-                    reply = "The awards are hosted proudly at ZPHS Nooliveedu school campus in Annamayya District, AP.";
-                } else if (lowerMsg.includes("founder") || lowerMsg.includes("ganesh")) {
-                    reply = "This initiative was founded, developed, and maintained by Ganesh Mandem as a token of eternal gratitude to his alma mater.";
-                }
-                
-                appendChatMessage("bot", reply);
-            }, 600);
-        }
-
-        function handleChat(event) {
-            if (event.key === "Enter") {
-                sendMessage();
-            }
-        }
-    </script>
+function handleChat(event) {
+    if(event.key === "Enter") {
+        sendMessage();
+    }
+}
+</script>
 </body>
-
 </html>
