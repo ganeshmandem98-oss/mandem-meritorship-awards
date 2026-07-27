@@ -60,7 +60,7 @@ nav a:hover {
     background: rgba(255,255,255,0.15);
 }
 
-/* Main Section Layout - Perfectly Unified Dimensions to Fix Section Shifting */
+/* Main Section Layout - Consistent across pages */
 section {
     max-width: 900px;
     margin: 30px auto;
@@ -147,7 +147,7 @@ section h2 {
     background: rgba(19, 64, 116, 0.95);
 }
 
-/* Stunning Glassmorphic / Gradient Sanskrit Quote Box */
+/* Poetic Sanskrit Quote Box */
 .poetic-box {
     background: linear-gradient(135deg, #134074 0%, #0b2545 100%);
     border-left: 6px solid #ee6c4d;
@@ -418,47 +418,42 @@ footer p {
 <section>
 <h2>WELCOME TO THE MANDEM MERITORSHIP AWARDS</h2>
 
-<!-- 6-Slide High-Aesthetic Hero Slideshow with "Maa Telugu Talliki" Background Audio -->
 <div class="slider-container">
-    <!-- Background Audio (Maa Telugu Talliki Instrumental / Song) -->
-    <audio id="bgm-audio" loop>
-        <source src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Maa_Telugu_Talliki.ogg" type="audio/ogg">
+    <audio id="bgm-audio" loop preload="auto">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
-    <!-- Clickable Audio Control Badge -->
     <div class="audio-control-bar" onclick="toggleAudio()" id="audio-btn">
         🎵 Play Telugu Anthem BGM
     </div>
 
-    <!-- 6 Village & Government School Backdrop Slides -->
     <div class="slide active">
-        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80" alt="ZPHS Nooliveedu School Campus">
+        <img src="https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?auto=format&fit=crop&w=1200&q=80" alt="ZPHS Nooliveedu School Campus">
         <div class="slide-caption">ZPHS Nooliveedu School Campus — Annamayya District, AP</div>
     </div>
     <div class="slide">
-        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80" alt="Rural Government School Students">
-        <div class="slide-caption">Dedicated Students Learning in Rural AP Government High Schools</div>
+        <img src="https://images.unsplash.com/photo-1532375810709-75b1da00537c?auto=format&fit=crop&w=1200&q=80" alt="Indian Rural Students">
+        <div class="slide-caption">Rural School Students & Young Bright Minds of Andhra Pradesh</div>
     </div>
     <div class="slide">
-        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1200&q=80" alt="Academic Achievement & Awards">
-        <div class="slide-caption">Honoring Top SSC Achievers with Meritorship Recognition</div>
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80" alt="Classroom Study Session">
+        <div class="slide-caption">Dedicated Learners Building a Stronger Future</div>
     </div>
     <div class="slide">
-        <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80" alt="Classroom Interaction">
-        <div class="slide-caption">Fostering Academic Excellence & Bright Futures in Annamayya District</div>
+        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80" alt="Award Ceremony Event">
+        <div class="slide-caption">Honoring Academic Excellence and Meritorious Achievers</div>
     </div>
     <div class="slide">
-        <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80" alt="School Library & Learning Center">
-        <div class="slide-caption">Empowering Young Minds Through Education & Gratitude</div>
+        <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80" alt="School Library and Learning">
+        <div class="slide-caption">Rooted in Hometown Values & Gratitude from 2026 Onwards</div>
     </div>
     <div class="slide">
-        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" alt="Village Heritage and Roots">
-        <div class="slide-caption">Rooted Deep in Village Values — From 2026 Onwards</div>
+        <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80" alt="Community Support">
+        <div class="slide-caption">Inspiring Generations to Rise Higher Through Education</div>
     </div>
 </div>
 
-<!-- Stunning Poetic Sanskrit Quote Box -->
 <div class="poetic-box">
     <div class="poetic-text">
         "Janmabhumiḥ sadā mātā, śālā janani-rūpiṇī ।<br>
@@ -482,7 +477,6 @@ footer p {
     <p>Developed & Maintained by</p>
     <p><b>GANESH MANDEM</b></p>
     
-    <!-- Single Line Bottom Info with Live Clock & Visitor Stats -->
     <div class="single-line-footer">
         <span>© 2026 All Rights Reserved</span>
         <span>|</span>
@@ -495,7 +489,6 @@ footer p {
 </div>
 </footer>
 
-<!-- GANACE AI Chatbot Widget -->
 <div class="chatbot-container">
     <button class="chat-toggle-btn" onclick="toggleChat()">💬 GANACE AI</button>
     
@@ -541,7 +534,7 @@ function nextSlide() {
 }
 setInterval(nextSlide, 4000);
 
-// Background Music Toggle Logic
+// Background Music Toggle Logic (Fixed audio play trigger)
 let isPlaying = false;
 function toggleAudio() {
     const audio = document.getElementById('bgm-audio');
@@ -555,7 +548,7 @@ function toggleAudio() {
             btn.innerHTML = "⏸️ Pause BGM";
             isPlaying = true;
         }).catch(err => {
-            alert("Audio playback requires browser interaction.");
+            alert("Browser autoplay policy blocked audio. Click again to play.");
         });
     }
 }
