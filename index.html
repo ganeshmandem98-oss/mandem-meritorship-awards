@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Mandem Meritorship Awards - 2026</title>
-    <link rel="stylesheet" href="style.css">
     <style>
         /* Global Reset & Body Styling */
         body {
@@ -23,6 +22,24 @@
             padding: 25px 20px;
             text-align: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .header-logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .site-logo {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            border-radius: 50%;
+            background: #ffffff;
+            padding: 5px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            border: 2px solid #ee6c4d;
         }
 
         header h1 {
@@ -88,24 +105,27 @@
             overflow: hidden;
             border-radius: 16px;
             box-shadow: 0 10px 30px rgba(11,37,69,0.2);
-            background: #000;
+            background: #0b2545;
         }
 
         .slide {
             width: 100%;
             height: 100%;
-            object-fit: cover;
             position: absolute;
             top: 0;
             left: 0;
             opacity: 0;
-            transition: opacity 1.2s ease-in-out, transform 6s ease-out;
-            transform: scale(1);
+            transition: opacity 1.2s ease-in-out;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .slide.active {
             opacity: 1;
-            transform: scale(1.05);
         }
 
         .slide-caption {
@@ -113,14 +133,14 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(to top, rgba(11,37,69,0.85), transparent);
+            background: linear-gradient(to top, rgba(11,37,69,0.95), rgba(11,37,69,0.3), transparent);
             color: white;
-            padding: 25px 20px 15px 20px;
+            padding: 30px 20px 18px 20px;
             text-align: center;
             font-size: 16px;
-            font-weight: 500;
+            font-weight: 600;
             letter-spacing: 0.5px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
             z-index: 2;
         }
 
@@ -130,22 +150,23 @@
             top: 15px;
             right: 15px;
             z-index: 10;
-            background: rgba(11, 37, 69, 0.85);
-            padding: 8px 14px;
+            background: rgba(11, 37, 69, 0.9);
+            padding: 8px 16px;
             border-radius: 20px;
             color: white;
             font-size: 13px;
+            font-weight: bold;
             cursor: pointer;
             display: flex;
             align-items: center;
             gap: 6px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.3);
             outline: none;
         }
 
         .audio-control-bar:hover {
-            background: rgba(19, 64, 116, 0.95);
+            background: #ee6c4d;
         }
 
         /* Poetic Quote Box */
@@ -404,7 +425,11 @@
 <body>
 
     <header>
-        <img src="images/logo.png" class="logo" style="display: block; margin: 0 auto 5px auto;" alt="Logo" width="45" onerror="this.style.display='none'">
+        <!-- Logo Header Container -->
+        <div class="header-logo-container">
+            <img src="images/logo.png" alt="Mandem Meritorship Emblem" class="site-logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/2991/2991108.png'">
+        </div>
+        
         <h1>THE MANDEM MERITORSHIP AWARDS</h1>
         <p>"Celebrating Excellence • Inspiring Futures"</p>
         <nav>
@@ -424,44 +449,54 @@
         <h2>WELCOME TO THE MANDEM MERITORSHIP AWARDS</h2>
 
         <div class="slider-container">
+            <!-- Audio MP3 Stream -->
             <audio id="bgm-audio" loop preload="auto">
-                <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf7f6.mp3?filename=inspiring-cinematic-ambient-111152.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
             </audio>
 
             <button class="audio-control-bar" onclick="toggleAudio()" id="audio-btn" type="button">
                 🎵 Play Inspiring BGM
             </button>
 
+            <!-- Slide 1 -->
             <div class="slide active">
-                <img src="https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?auto=format&fit=crop&w=1200&q=80" alt="ZPHS Nooliveedu School Campus">
+                <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80" alt="School Building Campus">
                 <div class="slide-caption">ZPHS Nooliveedu School Campus — Annamayya District, AP</div>
             </div>
+
+            <!-- Slide 2 -->
             <div class="slide">
-                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80" alt="Indian School Classroom">
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80" alt="Students in Classroom">
                 <div class="slide-caption">Dedicated Students Learning Together in a Rural Classroom Setup</div>
             </div>
+
+            <!-- Slide 3 -->
             <div class="slide">
-                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80" alt="Awards and Recognition">
+                <img src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&w=1200&q=80" alt="Award Trophy and Certificate">
                 <div class="slide-caption">Honoring Hardworking Students with Meritorship & Cash Awards</div>
             </div>
+
+            <!-- Slide 4 -->
             <div class="slide">
-                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80" alt="Academic Excellence">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" alt="Students Celebrating Success">
                 <div class="slide-caption">Encouraging Academic Excellence & Inspiring Next Generations</div>
             </div>
+
+            <!-- Slide 5 -->
             <div class="slide">
-                <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80" alt="Library and Study">
+                <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80" alt="Library and Study Material">
                 <div class="slide-caption">Rooted in Hometown Values — Built From 2026 Onwards</div>
             </div>
         </div>
 
         <div class="poetic-box">
             <div class="poetic-text">
-                "Janmabhumiḥ sadā mātā, śālā janani-rūpiṇī ।<br>
-                Gaṇeśa-maṇḍamaiḥ kṛtyaṁ, sahāyaṁ ruciraṁ dhruvam ॥"
+                "Janmabhumiḥ Sadā Mātā, Sālā Janani-rūpiṇī ।<br>
+                Gaṇeśa-Maṇḍemaiḥ Kṛtyaṁ, Sahāyaṁ Ruciraṁ Dhruvam ॥"
             </div>
             <div class="poetic-translation">
-                (జన్మభూమిః సదా మాతా, శాలా జనని-రూపిణీ । గణేశ-మండమైః కృత్యం, సహాయం రుచిరం ధ్రువమ్ ॥)<br>
+                (జన్మభూమిః సదా మాతా, శాలా జనని-రూపిణీ।
+                గణేశ-మండమైః కృత్యం, సహాయం రుచిరం ధ్రువమ్ ॥)<br>
                 <b>Meaning:</b> Birthplace is always a mother, the school is the embodiment of a mother. This delightful assistance is a true duty performed by Ganesha Mandam.
             </div>
         </div>
@@ -483,7 +518,7 @@
                 <span>|</span>
                 <span>Follow: <a href="https://www.instagram.com/amavaasyavennelalu/" target="_blank" rel="noopener noreferrer">AmavaasyaVennelalu</a></span>
                 <span>|</span>
-                <span id="visitor-count">👁️ Visitors: 1,428</span>
+                <span id="visitor-count">👁️ Visitors: 10 </span>
                 <span>|</span>
                 <span id="live-clock">📅 Loading...</span>
             </div>
@@ -521,7 +556,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
     <script>
         // Image Slider Logic
         let currentSlide = 0;
@@ -552,8 +586,9 @@
                 audio.play().then(() => {
                     btn.innerHTML = "⏸️ Pause BGM";
                     isPlaying = true;
-                }).catch(() => {
-                    alert("Browser policy blocked autoplay. Click play again!");
+                }).catch((err) => {
+                    console.error("Audio playback error:", err);
+                    alert("Please click Play again!");
                 });
             }
         }
@@ -572,9 +607,9 @@
         // Realistic Dynamic Visitor Counter Logic
         let baseVisitors = localStorage.getItem('site_visitors');
         if (!baseVisitors) {
-            baseVisitors = 1428; // Starting organic base number
+            baseVisitors = 0;
         } else {
-            baseVisitors = parseInt(baseVisitors, 10) + Math.floor(Math.random() * 3) + 1; // Increment organically
+            baseVisitors = parseInt(baseVisitors, 10) + Math.floor(Math.random() * 3) + 1;
         }
         localStorage.setItem('site_visitors', baseVisitors);
 
@@ -589,7 +624,6 @@
             if (chatBox) chatBox.classList.toggle("active");
         }
 
-        // Helper function to safely append messages and prevent XSS
         function appendChatMessage(role, text) {
             const chatBody = document.getElementById("chat-body");
             if (!chatBody) return;
@@ -611,7 +645,6 @@
             }
             userName = name;
             
-            // Append user name response safely
             appendChatMessage("user", `My name is ${userName}.`);
             
             const chatBody = document.getElementById("chat-body");
@@ -622,7 +655,6 @@
                 chatBody.appendChild(botWelcome);
             }
             
-            // Hide ONLY the form inputs, keeping the intro greeting visible
             const leadFormDiv = document.getElementById("lead-form");
             if (leadFormDiv) leadFormDiv.style.display = "none";
             
