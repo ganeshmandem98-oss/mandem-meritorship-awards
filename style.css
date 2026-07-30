@@ -18,8 +18,8 @@ header {
 }
 
 header .logo {
-    width: 70px;
-    height: 70px;
+    width: 900px;
+    height: 900px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #8da9c4;
