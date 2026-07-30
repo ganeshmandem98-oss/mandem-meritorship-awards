@@ -20,7 +20,7 @@ header {
 header .logo {
     width: 90px;
     height: 90px;
-    border-radius: 50%;
+    border-radius: 0%;
     object-fit: contain;
     border: 2px solid #8da9c4;
     margin-bottom: 5px; /* లోగో కింద గ్యాప్ తగ్గించబడింది */
