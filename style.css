@@ -114,7 +114,7 @@ h2 {
 .recipient-card .img-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.5s ease;
 }
 
@@ -186,7 +186,7 @@ h2 {
 .profile-img-container img, .memory-img-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .profile-details, .memory-content {
