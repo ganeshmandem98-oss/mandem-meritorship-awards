@@ -193,8 +193,25 @@ h2 {
 }
 
 .profile-details, .memory-content {
-    flex: 2;
-    min-width: 280px;
+   /* Founder Profile Text Styling */
+
+.founder-name {
+    font-size: 26px;
+    color: #0b2545;
+    margin: 5px 0;
+}
+
+.founder-designation {
+    font-size: 16px;
+    font-weight: 600;
+    color: #134074;
+    margin: 3px 0;
+}
+
+.founder-qualification {
+    font-size: 14px;
+    color: #666;
+    margin: 3px 0 15px 0;
 }
 
 .profile-details h3, .memory-content h3 {
